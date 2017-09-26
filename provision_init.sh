@@ -107,3 +107,8 @@ then
     git clone https://github.com/wrichert/BuildingMachineLearningSystemsWithPython.git
 fi
 
+if [ ! -f ~/.config/matplotlib/matplotlibrc]
+then
+    echo "backend : Agg" > ~/.config/matplotlib/matplotlibrc
+fi
+
