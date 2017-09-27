@@ -97,6 +97,12 @@ sudo ${PIP_AT}/bin/pip${PYTHON} install sphinx
 # install pydot
 sudo ${PIP_AT}/bin/pip${PYTHON} install pydot
 
+# install nose
+sudo ${PIP_AT}/bin/pip${PYTHON} install nose
+
+# install basemap
+sudo ${PIP_AT}/bin/pip${PYTHON} install https://github.com/matplotlib/basemap/archive/v1.1.0.tar.gz
+
 # install gensim
 sudo ${PIP_AT}/bin/pip${PYTHON} install --upgrade gensim
 
@@ -105,6 +111,13 @@ if [ ! -e /vagrant/BuildingMachineLearningSystemsWithPython ] && [ -f /vagrant/V
 then
     cd /vagrant
     git clone https://github.com/wrichert/BuildingMachineLearningSystemsWithPython.git
+fi
+
+# get PyRockSim
+if [ ! -e /vagrant/PyRockSim ] && [ -f /vagrant/Vagrantfile ]
+then
+    cd /vagrant
+    git clone https://github.com/pyjbooks/PyRockSim.git
 fi
 
 if [ ! -e ~/.config/matplotlib/ ]
