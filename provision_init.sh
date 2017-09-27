@@ -100,11 +100,28 @@ sudo ${PIP_AT}/bin/pip${PYTHON} install pydot
 # install nose
 sudo ${PIP_AT}/bin/pip${PYTHON} install nose
 
-# install basemap
-sudo ${PIP_AT}/bin/pip${PYTHON} install https://github.com/matplotlib/basemap/archive/v1.1.0.tar.gz
+# install shapely
+sudo ${PIP_AT}/bin/pip${PYTHON} install shapely
 
 # install gensim
 sudo ${PIP_AT}/bin/pip${PYTHON} install --upgrade gensim
+
+# install basemap
+if [ ! -e ${SRC_TO}/basemap-1.1.0 ]
+then
+    cd ${SRC_TO}
+    # install geos
+    sudo wget https://github.com/matplotlib/basemap/archive/v1.1.0.tar.gz
+    sudo tar xvf v1.1.0.tar.gz
+    cd basemap-1.1.0/geos-3.3.3
+    sudo ./configure
+    sudo make
+    sudo make install
+
+    # install basemap
+    cd ../
+    sudo ${PIP_AT}/bin/pip${PYTHON} install ./
+fi
 
 # get oreilly sample source
 if [ ! -e /vagrant/BuildingMachineLearningSystemsWithPython ] && [ -f /vagrant/Vagrantfile ]
