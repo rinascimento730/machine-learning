@@ -103,6 +103,12 @@ sudo ${PIP_AT}/bin/pip${PYTHON} install nose
 # install shapely
 sudo ${PIP_AT}/bin/pip${PYTHON} install shapely
 
+# install coverage
+sudo ${PIP_AT}/bin/pip${PYTHON} install coverage
+
+# install ipython
+sudo ${PIP_AT}/bin/pip${PYTHON} install ipython
+
 # install gensim
 sudo ${PIP_AT}/bin/pip${PYTHON} install --upgrade gensim
 
