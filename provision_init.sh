@@ -153,3 +153,19 @@ then
     echo "backend : Agg" > ~/.config/matplotlib/matplotlibrc
 fi
 
+# Install Japanese fonts
+if [ ! -f /usr/share/fonts/ipaexg00102/ipaexg.ttf ]
+then
+    cd ${SRC_TO}
+    sudo wget -O ipafont.zip http://ipafont.ipa.go.jp/old/ipafont/IPAfont00303.php
+    sudo wget -O ipaexfont.zip http://ipafont.ipa.go.jp/old/old/old/ipaexg00102.php
+    sudo unzip ipafont.zip
+    sudo unzip ipaexfont.zip
+    sudo mkdir -p /usr/share/fonts/IPAfont00303
+    sudo cp IPAfont00303/*.ttf /usr/share/fonts/IPAfont00303
+    sudo mkdir -p /usr/share/fonts/ipaexg00102/
+    sudo cp ipaexg00102/ipaexg00102/*.ttf /usr/share/fonts/ipaexg00102
+    fc-cache -fv
+    rm ~/.cache/matplotlib/fontList.py3k.cache
+fi
+
