@@ -109,6 +109,12 @@ sudo ${PIP_AT}/bin/pip${PYTHON} install coverage
 # install ipython
 sudo ${PIP_AT}/bin/pip${PYTHON} install ipython
 
+# install nltk
+sudo ${PIP_AT}/bin/pip${PYTHON} install -U nltk
+
+# install pyyaml
+sudo ${PIP_AT}/bin/pip${PYTHON} install pyyaml
+
 # install gensim
 sudo ${PIP_AT}/bin/pip${PYTHON} install --upgrade gensim
 
