@@ -118,6 +118,9 @@ sudo ${PIP_AT}/bin/pip${PYTHON} install pyyaml
 # install gensim
 sudo ${PIP_AT}/bin/pip${PYTHON} install --upgrade gensim
 
+# install jug
+sudo ${PIP_AT}/bin/pip${PYTHON} install jug
+
 # install basemap
 if [ ! -e ${SRC_TO}/basemap-1.1.0 ]
 then
