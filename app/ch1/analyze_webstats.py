@@ -75,7 +75,7 @@ def when_reach_target(target, func, init):
 	print(func)
 	print(func - target)
 	reached_max = fsolve(func - target, init) / (7 * 24)
-	print(target + " hits/hour expected at week %f" % reached_max[0])
+	print(str(target) + " hits/hour expected at week %f" % reached_max[0])
 
 def main():
 	x, y = get_web_trafic(data_file)
@@ -163,10 +163,7 @@ def main():
 	    ymax=10000, xmin=0 * 7 * 24)
 
 	# select best model and predict the time to reach 10000 hit/hour
-	print(fbt2)
-	print(fbt2 - 100000)
-	reached_max = fsolve(fbt2 - 100000, 800) / (7 * 24)
-	print("100,000 hits/hour expected at week %f" % reached_max[0])
+	when_reach_target(100000, fbt2, 800)
 
 if __name__ == "__main__":
 	main()
