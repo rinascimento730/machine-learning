@@ -48,3 +48,38 @@ print(a.dtype)
 print(b.dtype)
 print(c.dtype)
 print(d.dtype)
+
+c = np.array([[0, 1, 2, 3, 4, 5], [0, 1, 2, 3, 4, 5]])
+d = np.array([0, 1, 2, 3, 4, 5])
+
+print(c + d)
+print(c.flatten())
+print(d.reshape(3,2))
+e = np.array([
+		[1,2,3],
+		[4,5,6],
+		[7,8,9]
+	])
+print(np.diag(e))
+print(np.diag(np.diag(e)))
+print(e.transpose())
+e[e >= 5] = 0
+print(e)
+
+f = np.array([
+		[1,2,3],
+		[4,5,6],
+		[7,8,9]
+	])
+
+# 要素削除
+g = np.delete(f, [0, 1], 0)
+print(g)
+
+h = np.delete(f, [0, 1], 1)
+print(h)
+
+# 行最大値抽出
+print(np.max(f, axis = 0))
+# 列最大値抽出
+print(np.max(f, axis = 1))
