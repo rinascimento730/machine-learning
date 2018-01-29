@@ -83,3 +83,16 @@ print(h)
 print(np.max(f, axis = 0))
 # 列最大値抽出
 print(np.max(f, axis = 1))
+
+i = np.arange(25).reshape(5,5)
+print(i[:])
+print(i[:3, :2])
+
+j = np.array([
+		[1,2,3,4],
+		[5,6,7,8],
+		[9,10,11,12],
+		[13,14,15,16],
+	])
+print(np.delete(j, [0, 2], 0))
+
