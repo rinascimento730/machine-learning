@@ -36,8 +36,6 @@ def apply_model(feature, setosa_threshold):
     else:
         print('Iris Virginica or Iris Versicolor')
 
-
-
 def main():
     features, feature_names, species = get_iris_data()
     #print(species)
@@ -51,9 +49,6 @@ def main():
             apply_model(feature, setosa_threshold)
     else:
         print("Can't classify")
-
-
-
 
 if __name__ == "__main__":
     main()

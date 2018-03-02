@@ -123,6 +123,13 @@ sudo ${PIP_AT}/bin/pip${PYTHON} install jug
 
 # install basemap
 if [ ! -e ${SRC_TO}/basemap-1.1.0 ]
+
+# install milksets
+sudo ${PIP_AT}/bin/pip${PYTHON} install milksets
+
+# install knn
+sudo ${PIP_AT}/bin/pip${PYTHON} install knn
+
 then
     cd ${SRC_TO}
     # install geos
