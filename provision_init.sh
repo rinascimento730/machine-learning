@@ -130,6 +130,9 @@ sudo ${PIP_AT}/bin/pip${PYTHON} install milksets
 # install knn
 sudo ${PIP_AT}/bin/pip${PYTHON} install knn
 
+# install sklearn
+sudo ${PIP_AT}/bin/pip${PYTHON} install sklearn
+
 then
     cd ${SRC_TO}
     # install geos

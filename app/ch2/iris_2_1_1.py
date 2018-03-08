@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 from sklearn.datasets import load_iris
 import numpy as np
 import statistics as st
-import treshold
+import threshold
 import os
 from sklearn.model_selection import KFold
 
@@ -84,6 +84,8 @@ def learn_model(features, labels):
                 best_acc = acc
                 best_fi = fi
                 best_t = t
+    print(pred)
+    print(labels == 'virginica')
 
     print('best_acc:', best_acc)
     return best_t, best_fi
