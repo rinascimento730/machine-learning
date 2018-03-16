@@ -127,11 +127,17 @@ if [ ! -e ${SRC_TO}/basemap-1.1.0 ]
 # install milksets
 sudo ${PIP_AT}/bin/pip${PYTHON} install milksets
 
+# install milk
+sudo ${PIP_AT}/bin/pip${PYTHON} install milk
+
 # install knn
 sudo ${PIP_AT}/bin/pip${PYTHON} install knn
 
 # install sklearn
 sudo ${PIP_AT}/bin/pip${PYTHON} install sklearn
+
+# install mpltools
+sudo ${PIP_AT}/bin/pip${PYTHON} install mpltools
 
 then
     cd ${SRC_TO}
